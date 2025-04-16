@@ -111,29 +111,30 @@ print the list, each gift on a new line.
 print("Gift List")
 print("this program stores your gift list and then displays it")
 
-gift_list = "your code here"  # empty gift list
-add_gift = "your code here" # boolean variable to check if no more gifts are to be added.
+gift_list = []  # empty gift list
+add_gift = True # boolean variable to check if no more gifts are to be added.
 
-while ("your code here"): 
-    next_gift = "your code here"
-    if ("your code here"):
+while (add_gift==True): 
+    next_gift = input("Enter next gift / N to stop")
+    if (next_gift.upper()=="N"):
         # no new gifts
-        add_gift = "your code here"
+        add_gift = False
     else:
         # add next_gift  to gift list #
-        "your code here"
+        gift_list.append(next_gift)
 
 #display list
 
 print()
 print("Gift List Display")
 print()
-if ("your code here"): # check if gift_list is empty #
+if (len(gift_list)==0): # check if gift_list is empty #
 
     print("No gifts added")
 else:
     #use a for loop to iterate through gift_list to display each gift
-    "your code here"
+    for gift in gift_list:
+        print(gift)
                                                     
         
                                                                          #  Total for Task 4 (20 marks)
