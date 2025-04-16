@@ -38,9 +38,9 @@ Then print a success message.
 secret = 7
 guess = None
 
-while "your code here":
+while guess!=secret:
     guess = int(input("Guess the number: "))
-    if "your code here":
+    if guess==secret:
         print("Correct! You guessed it.")
     else:
         print("Wrong. Try again.")
