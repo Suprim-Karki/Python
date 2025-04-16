@@ -27,7 +27,7 @@ Task 1 - Single attempt: A user must enter a 6-digit code and a secret word that
 
 to be able to perform secure transactions. If correct information is entered a message saying "secure transactions allowed" is 
 
-printed, otherwise a message "no transactions allowd". 
+printed, otherwise a message "no transactions allowed". 
 
 Complete code for Task 1:
 '''
@@ -37,18 +37,16 @@ secret_word = "mock_test"
 
 # get user information: use input function
 
-user_code =  "your code here"
-user_word =  "your code here"
+user_code =  input("Enter the code")
+user_word = input("Enter the word")
 
 # Check if correct information is entered.
 # print a suitable message to inform the user.
 
-if("your code here"): # Write the missing code (condition) in the bracket:   
-    print("your code here")       
+if(correct_code==user_code and secret_word==user_word): # Write the missing code (condition) in the bracket:   
+    print("secure transactions allowed")       
 else:                                                             
-    print("your code here")                     
-                                                                    # Total for Task 1     (20 marks)
-
+    print("no transactions allowed")           
 
 
 '''
