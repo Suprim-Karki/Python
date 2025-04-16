@@ -21,10 +21,10 @@ Ask the user for a number and print whether it's even or odd.
 
 number = int(input("Enter a number: "))
 
-if "your code here":
-    print("your code here")
+if number%2==0:
+    print("The number is even")
 else:
-    print("your code here")
+    print("The number is odd")
 
 # Total for Task 1 (10 marks)
 
