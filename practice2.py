@@ -54,24 +54,24 @@ Task 2 - Multiple attempts: A user must enter a 6-digit code and a secret word t
 
 to be able to perform secure transactions. If correct information is entered a message saying "secure transactions allowed" is 
 
-printed, otherwise a message "no transactions allowd". 
+printed, otherwise a message "no transactions allowed". 
 
 Complete code for Task 2:
 
 '''
 
 
-valid_data = "your code here" # use a boolean variable to track information entered is correct or not:
+valid_data = False # use a boolean variable to track information entered is correct or not:
 
-while ("your code here"):
-    user_code =  "your code here"
-    user_word = "your code here"
+while (valid_data==False):
+    user_code =  input("Enter the code")
+    user_word = input("Enter the word")
 
-    if("your code here"): 
-        print("your code here")
-        valid_data = "your code here"
+    if(correct_code==user_code and secret_word==user_word): 
+        print("secure transactions allowed")
+        valid_data = True
     else:
-        print("your code here") #                                          
+        print("no transactions allowed")                                        
         
 
                                                                     # Total for Task 2 (20 marks)
