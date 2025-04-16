@@ -91,10 +91,10 @@ Print “Pass” if marks >= 50, else “Fail”.
 
 num_students = int(input("How many students? "))
 
-for "your code here":
+for i in range(num_students):
     name = input("Enter name: ")
     marks = int(input("Enter marks: "))
-    if "your code here":
+    if marks>=50:
         print(f"{name} has Passed")
     else:
         print(f"{name} has Failed")
