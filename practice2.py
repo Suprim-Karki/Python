@@ -144,28 +144,26 @@ Encapsulate Task 4 into a function add_to_gift_list().
 '''
 
 def add_to_gift_list():
-    gift_list = "your code here" # create empty gift list
-    add_gift = "your code here"
+    gift_list = [] # create empty gift list
+    add_gift = True
 
 
-    while ("your code here"):
-        next_giftm =  "your code here"
-        if ("your code here"):   # write the if condition that checks if user does not want to add any more gifts
-            add_gift="your code here"
-            return "your code here"
+    while (add_gift==True):
+        next_giftm =  input("Enter next gift / N to stop")
+        if (next_giftm.upper()=="N"):   # write the if condition that checks if user does not want to add any more gifts
+            add_gift=False
+            return gift_list
         else:
-             "your code here"   #  update gift list
+             gift_list.append(next_giftm)   #  update gift list
 
 # Call function to get gift list
-gift_list = "your code here"
+gift_list = add_to_gift_list()
 
 # Display gift list
 
 print("\nGift List:")
-if ("your code here"):
-    print("your code here")
+if (len(gift_list)==0):
+    print("No gifts to - empty gift list!")
 else:
-    "your code here"
-
-
-                                                                        # Total for Task 5: (20 marks)
+    for gift in gift_list:  
+        print(gift)
