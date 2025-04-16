@@ -82,23 +82,23 @@ Modify Task 2 by introducing a function to check user enteterd information.
 '''
 
 def check_user_info(code, word):
-    if("your code here"):
-        return "your code here"
+    if(correct_code==code and secret_word==word):
+        return True
     else:
-        return "your code here"
+        return False
     
 # end of function
 
-user_code =  "your code here"
-user_word = "your code here"
-valid_data = "your code here"
-while("your code here"):
+user_code =  input("Enter the code")
+user_word = input("Enter the word")
+valid_data = check_user_info(user_code,user_word)
+while(valid_data==False):
     print("no transactions allowd")
-    user_code = "your code here"
-    user_word = "your code here"
-    valid_data = "your code here"
+    user_code =  input("Enter the code")
+    user_word = input("Enter the word")
+    valid_data = check_user_info(user_code,user_word)
     print()
-print("secure transactions allowed") #   
+print("secure transactions allowed") #  #   
                                                 
                                                                      # Total for Task 3 (20 marks)
 
