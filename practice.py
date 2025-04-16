@@ -55,8 +55,8 @@ Ask user for a number and print the first 5 multiples of that number using a loo
 
 num = int(input("Enter a number to see its first 5 multiples: "))
 
-for "your code here":
-    print("your code here")
+for i in range(1,6):
+    print(f"{num}*{i}={num*i}")
 
 # Total for Task 3 (20 marks)
 
