@@ -108,24 +108,34 @@ Ask the user to enter a list of numbers. Write a program to find and print the s
 largest numbers in the list.'''
 
 
-nums=input("Enter a list of numbers separated by blank space ")
-try:
-    nums_list=list(map(int,nums.split()))
-    if len(nums_list)==0:
-        print("The list is empty")
-    else:
-        min=nums_list[0]
-        max=nums_list[0]
-        for i in nums_list:
-            if i<min:
-                min=i
-            elif i>max:
-                max=i
-    print(f"min = {min} \nmax = {max}")
-except ValueError:
-    print("Enter correct values")
+# nums=input("Enter a list of numbers separated by blank space ")
+# try:
+#     nums_list=list(map(int,nums.split()))
+#     if len(nums_list)==0:
+#         print("The list is empty")
+#     else:
+#         min=nums_list[0]
+#         max=nums_list[0]
+#         for i in nums_list:
+#             if i<min:
+#                 min=i
+#             elif i>max:
+#                 max=i
+#     print(f"min = {min} \nmax = {max}")
+# except ValueError:
+#     print("Enter correct values")
 
 '''10. Word Frequency Counter
 Write a program that takes a sentence from the user and counts the frequency of each word.
 Display the results as a dictionary where each word is a key and its frequency is the value.
 '''
+
+sentence=input("Enter a sentence: ")
+ans={}
+word_list=sentence.lower().split(" ")
+for word in word_list:
+    if word in ans:
+        ans[word]+=1
+    else:
+        ans[word]=1
+print(ans)
