@@ -6,21 +6,27 @@ Conditions, Loops, and Basic String Manipulation
 Write a program that takes a number from the user and checks if it is a prime number. If the
 number is prime, print ”The number is prime”; otherwise, print ”The number is not prime.”'''
 
-n=int(input("Enter a number\n"))
-c=0
-for i in range(n+1):
-    if n%i==0:
-        c+=1
-if c==2:
-    print("Prime")
-else:
-    print("Not prime")
+# n=int(input("Enter a number\n"))
+# c=0
+# for i in range(1,n+1):
+#     if n%i==0:
+#         c+=1
+# if c==2:
+#     print("Prime")
+# else:
+#     print("Not prime")
 
 
 
 '''2. Factorial Calculation Using a Loop
 Ask the user to enter a positive integer and write a program to calculate its factorial using a
 for loop. Display the result.'''
+
+# n=int(input("Enter a number"))
+# fact=1
+# for i in range(1,n+1):
+#     fact*=i
+# print(fact)
 
 '''3. Reverse a String
 Write a program that asks the user for a string and then prints the reversed version of that
