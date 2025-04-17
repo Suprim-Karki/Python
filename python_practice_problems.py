@@ -32,6 +32,12 @@ for loop. Display the result.'''
 Write a program that asks the user for a string and then prints the reversed version of that
 string. For example, if the input is ”Python,” the output should be ”nohtyP”.'''
 
+# s=input("Enter a string")
+# rev=""
+# for i in range(len(s)-1,-1,-1):
+#     rev+=s[i]
+# print(rev)
+
 '''4. Count Vowels in a String
 Ask the user to enter a string and write a program to count the number of vowels (a, e, i, o,
 u) in the string. Display the vowel count.'''
