@@ -203,14 +203,14 @@ list of words as the output.'''
 Ask the user to enter a sentence and write a program that capitalizes the first letter of each
 word in the sentence. Display the modified sentence.'''
 
-sentence=input("Enter a sentence: ")
-modified_sentence=""
-word_list=sentence.split(" ")
-for i,word in enumerate(word_list):
-    word = word[0].upper()+word[1:]
-    word_list[i]=word
-modified_sentence=" ".join(word_list)
-print(modified_sentence)
+# sentence=input("Enter a sentence: ")
+# modified_sentence=""
+# word_list=sentence.split(" ")
+# for i,word in enumerate(word_list):
+#     word = word[0].upper()+word[1:]
+#     word_list[i]=word
+# modified_sentence=" ".join(word_list)
+# print(modified_sentence)
 
 # or just use modified=sentence.title()
 
@@ -218,6 +218,20 @@ print(modified_sentence)
 '''17. Find the Second Largest Number
 Ask the user for a list of integers and write a program to find the second largest number in
 the list.'''
+
+nums=input("Enter a list of numbers separated by space ")
+nums_list=list(map(int,nums.split()))
+if len(nums_list) < 2:
+    print("Please enter at least two numbers.")
+else:
+    largest=second_largest=float('-inf')
+    for i in nums_list:
+        if i>largest:
+            second_largest=largest
+            largest=i
+        elif i>second_largest and i<largest:
+            second_largest=i
+    print(second_largest)
 
 '''18. Check for Substring in String
 Ask the user to enter a string and a substring. Write a program to check if the substring
