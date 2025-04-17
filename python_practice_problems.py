@@ -42,19 +42,24 @@ string. For example, if the input is ”Python,” the output should be ”nohty
 Ask the user to enter a string and write a program to count the number of vowels (a, e, i, o,
 u) in the string. Display the vowel count.'''
 
-s=input("Enter a string")
-vowels=['a','e','i','o','u']
-c=0
+# s=input("Enter a string")
+# vowels=['a','e','i','o','u']
+# c=0
 
-for i in s:
-    if i.lower() in vowels:
-        c+=1
-print(c)
+# for i in s:
+#     if i.lower() in vowels:
+#         c+=1
+# print(c)
 
 '''5. Multiplication Table
 Write a program that takes a number from the user and prints its multiplication table up to
 10. For example, if the user enters 5, the output should display the table of 5 from 5 x 1 to
 5 x 10.'''
+
+num = int(input("Enter a number to see its first 10 multiples: "))
+
+for i in range(1,11):
+    print(f"{num}*{i}={num*i}")
 
 '''6. Sum of Digits of a Number
 Write a program that asks the user for a positive integer and calculates the sum of its digits.
