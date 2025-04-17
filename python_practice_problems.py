@@ -80,15 +80,28 @@ Ask the user for a word and write a program to check if it is a palindrome (read
 forward and backward). If it is a palindrome, print ”The word is a palindrome”; otherwise,
 print ”The word is not a palindrome.”'''
 
-s = input("Enter a string: ").lower()
-if s==s[::-1]:
-    print("Palindrome")
-else:
-    print("Not")
+# s = input("Enter a string: ").lower()
+# if s==s[::-1]:
+#     print("Palindrome")
+# else:
+#     print("Not")
 
 '''8. Generate Fibonacci Sequence
 Write a program that asks the user for a positive integer n and generates the first n numbers
 in the Fibonacci sequence.'''
+
+a=0
+b=1
+ans=[]
+try:
+    n = int(input("Enter a number: "))
+    if n>0:
+        for i in range(n):
+            ans.append(a)
+            a, b = b, a + b
+    print(ans)
+except ValueError:
+    print("Enter an integer greater than 0")
 
 '''9. Find Minimum and Maximum in a List
 Ask the user to enter a list of numbers. Write a program to find and print the smallest and
