@@ -182,18 +182,22 @@ list and then sorts the merged list in ascending order.'''
 Ask the user to enter a sentence and an integer n. Write a program to count the number of
 words in the sentence that have exactly n characters.'''
 
-sentence=input("Enter a sentence: ")
-n=int(input("Enter the length of word to count: "))
-word_list=sentence.split(" ")
-c=0
-for word in word_list:
-    if len(word)==n:
-        c+=1
-print(c)
+# sentence=input("Enter a sentence: ")
+# n=int(input("Enter the length of word to count: "))
+# word_list=sentence.split(" ")
+# c=0
+# for word in word_list:
+#     if len(word)==n:
+#         c+=1
+# print(c)
 
 '''15. Split a Sentence into Words
 Write a program that asks the user for a sentence and splits it into a list of words. Print the
 list of words as the output.'''
+
+sentence=input("Enter a sentence: ")
+word_list=sentence.split(" ")
+print(word_list)
 
 '''16. Capitalize Each Word in a Sentence
 Ask the user to enter a sentence and write a program that capitalizes the first letter of each
