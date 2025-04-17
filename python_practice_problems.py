@@ -90,22 +90,40 @@ print ”The word is not a palindrome.”'''
 Write a program that asks the user for a positive integer n and generates the first n numbers
 in the Fibonacci sequence.'''
 
-a=0
-b=1
-ans=[]
-try:
-    n = int(input("Enter a number: "))
-    if n>0:
-        for i in range(n):
-            ans.append(a)
-            a, b = b, a + b
-    print(ans)
-except ValueError:
-    print("Enter an integer greater than 0")
+# a=0
+# b=1
+# ans=[]
+# try:
+#     n = int(input("Enter a number: "))
+#     if n>0:
+#         for i in range(n):
+#             ans.append(a)
+#             a, b = b, a + b
+#     print(ans)
+# except ValueError:
+#     print("Enter an integer greater than 0")
 
 '''9. Find Minimum and Maximum in a List
 Ask the user to enter a list of numbers. Write a program to find and print the smallest and
 largest numbers in the list.'''
+
+
+nums=input("Enter a list of numbers separated by blank space ")
+try:
+    nums_list=list(map(int,nums.split()))
+    if len(nums_list)==0:
+        print("The list is empty")
+    else:
+        min=nums_list[0]
+        max=nums_list[0]
+        for i in nums_list:
+            if i<min:
+                min=i
+            elif i>max:
+                max=i
+    print(f"min = {min} \nmax = {max}")
+except ValueError:
+    print("Enter correct values")
 
 '''10. Word Frequency Counter
 Write a program that takes a sentence from the user and counts the frequency of each word.
