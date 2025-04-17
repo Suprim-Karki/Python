@@ -65,20 +65,26 @@ Write a program that takes a number from the user and prints its multiplication 
 Write a program that asks the user for a positive integer and calculates the sum of its digits.
 For example, if the input is 123, the output should be 6 (1 + 2 + 3).'''
 
-num = int(input("Enter a number: "))
-sum=0
-temp=0
+# num = int(input("Enter a number: "))
+# sum=0
+# temp=0
 
-while num>0:
-    temp=num%10
-    sum+=temp
-    num=num//10
-print(sum)
+# while num>0:
+#     temp=num%10
+#     sum+=temp
+#     num=num//10
+# print(sum)
 
 '''7. Palindrome Checker
 Ask the user for a word and write a program to check if it is a palindrome (reads the same
 forward and backward). If it is a palindrome, print ”The word is a palindrome”; otherwise,
 print ”The word is not a palindrome.”'''
+
+s = input("Enter a string: ").lower()
+if s==s[::-1]:
+    print("Palindrome")
+else:
+    print("Not")
 
 '''8. Generate Fibonacci Sequence
 Write a program that asks the user for a positive integer n and generates the first n numbers
