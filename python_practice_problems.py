@@ -169,18 +169,27 @@ to remove the duplicates and display the list with only unique numbers.'''
 Take two lists of integers from the user. Write a program that merges both lists into a single
 list and then sorts the merged list in ascending order.'''
 
-nums1=input("Enter a list of numbers separated by space ")
-nums_list1=list(map(int,nums1.split()))
-nums2=input("Enter a list of numbers separated by space ")
-nums_list2=list(map(int,nums2.split()))
+# nums1=input("Enter a list of numbers separated by space ")
+# nums_list1=list(map(int,nums1.split()))
+# nums2=input("Enter a list of numbers separated by space ")
+# nums_list2=list(map(int,nums2.split()))
 
-combined = (nums_list1+nums_list2)
-combined.sort()
-print(combined)
+# combined = (nums_list1+nums_list2)
+# combined.sort()
+# print(combined)
 
 '''14. Count Words of Specific Length
 Ask the user to enter a sentence and an integer n. Write a program to count the number of
 words in the sentence that have exactly n characters.'''
+
+sentence=input("Enter a sentence: ")
+n=int(input("Enter the length of word to count: "))
+word_list=sentence.split(" ")
+c=0
+for word in word_list:
+    if len(word)==n:
+        c+=1
+print(c)
 
 '''15. Split a Sentence into Words
 Write a program that asks the user for a sentence and splits it into a list of words. Print the
