@@ -238,15 +238,26 @@ Ask the user to enter a string and a substring. Write a program to check if the 
 exists within the string. If it does, print the starting index of the substring; otherwise, print
 ”Substring not found.”'''
 
-string=input("Enter a string: ")
-substring=input("Enter a substring: ")
-index=string.find(substring)
-print(index)
+# string=input("Enter a string: ")
+# substring=input("Enter a substring: ")
+# index=string.find(substring)
+# print(index)
 
 '''19. Replace a Word in a Sentence
 Write a program that asks the user for a sentence, a target word, and a replacement word.
 Replace all occurrences of the target word in the sentence with the replacement word and
 display the modified sentence.'''
+
+sentence=input("Enter a sentence: ")
+target=input("Enter a target word: ")
+replacement=input("Enter a replacement word: ")
+modified_sentence=""
+word_list=sentence.split(" ")
+for i,word in enumerate(word_list):
+    if word==target:
+        word_list[i]=replacement
+modified_sentence=" ".join(word_list)
+print(modified_sentence)
 
 '''20. Concatenate Two Lists Alternately
 Ask the user to enter two lists of equal length. Write a program to create a new list by picking
