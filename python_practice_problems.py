@@ -219,24 +219,29 @@ word in the sentence. Display the modified sentence.'''
 Ask the user for a list of integers and write a program to find the second largest number in
 the list.'''
 
-nums=input("Enter a list of numbers separated by space ")
-nums_list=list(map(int,nums.split()))
-if len(nums_list) < 2:
-    print("Please enter at least two numbers.")
-else:
-    largest=second_largest=float('-inf')
-    for i in nums_list:
-        if i>largest:
-            second_largest=largest
-            largest=i
-        elif i>second_largest and i<largest:
-            second_largest=i
-    print(second_largest)
+# nums=input("Enter a list of numbers separated by space ")
+# nums_list=list(map(int,nums.split()))
+# if len(nums_list) < 2:
+#     print("Please enter at least two numbers.")
+# else:
+#     largest=second_largest=float('-inf')
+#     for i in nums_list:
+#         if i>largest:
+#             second_largest=largest
+#             largest=i
+#         elif i>second_largest and i<largest:
+#             second_largest=i
+#     print(second_largest)
 
 '''18. Check for Substring in String
 Ask the user to enter a string and a substring. Write a program to check if the substring
 exists within the string. If it does, print the starting index of the substring; otherwise, print
 ”Substring not found.”'''
+
+string=input("Enter a string: ")
+substring=input("Enter a substring: ")
+index=string.find(substring)
+print(index)
 
 '''19. Replace a Word in a Sentence
 Write a program that asks the user for a sentence, a target word, and a replacement word.
