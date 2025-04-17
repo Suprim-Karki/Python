@@ -248,19 +248,30 @@ Write a program that asks the user for a sentence, a target word, and a replacem
 Replace all occurrences of the target word in the sentence with the replacement word and
 display the modified sentence.'''
 
-sentence=input("Enter a sentence: ")
-target=input("Enter a target word: ")
-replacement=input("Enter a replacement word: ")
-modified_sentence=""
-word_list=sentence.split(" ")
-for i,word in enumerate(word_list):
-    if word==target:
-        word_list[i]=replacement
-modified_sentence=" ".join(word_list)
-print(modified_sentence)
+# sentence=input("Enter a sentence: ")
+# target=input("Enter a target word: ")
+# replacement=input("Enter a replacement word: ")
+# modified_sentence=""
+# word_list=sentence.split(" ")
+# for i,word in enumerate(word_list):
+#     if word==target:
+#         word_list[i]=replacement
+# modified_sentence=" ".join(word_list)
+# print(modified_sentence)
 
 '''20. Concatenate Two Lists Alternately
 Ask the user to enter two lists of equal length. Write a program to create a new list by picking
 elements alternately from each list. For example, if the input lists are [1, 2, 3] and [’a’,
 ’b’, ’c’], the output should be [1, ’a’, 2, ’b’, 3, ’c’].
 '''
+
+nums1 = input("Enter the first list (separated by space): ").strip().split()
+nums2 = input("Enter the second list (separated by space): ").strip().split()
+ans=[]
+if len(nums1)==len(nums2) and len(nums1)>0:
+    for i in range(len(nums1)):
+        ans.append(nums1[i])
+        ans.append(nums2[i])
+    print(ans)
+else:
+    print("Provide 2 list of non empty and equal length")
