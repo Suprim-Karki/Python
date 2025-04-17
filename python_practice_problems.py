@@ -56,14 +56,24 @@ Write a program that takes a number from the user and prints its multiplication 
 10. For example, if the user enters 5, the output should display the table of 5 from 5 x 1 to
 5 x 10.'''
 
-num = int(input("Enter a number to see its first 10 multiples: "))
+# num = int(input("Enter a number to see its first 10 multiples: "))
 
-for i in range(1,11):
-    print(f"{num}*{i}={num*i}")
+# for i in range(1,11):
+#     print(f"{num}*{i}={num*i}")
 
 '''6. Sum of Digits of a Number
 Write a program that asks the user for a positive integer and calculates the sum of its digits.
 For example, if the input is 123, the output should be 6 (1 + 2 + 3).'''
+
+num = int(input("Enter a number: "))
+sum=0
+temp=0
+
+while num>0:
+    temp=num%10
+    sum+=temp
+    num=num//10
+print(sum)
 
 '''7. Palindrome Checker
 Ask the user for a word and write a program to check if it is a palindrome (reads the same
