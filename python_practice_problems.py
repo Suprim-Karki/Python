@@ -146,14 +146,24 @@ Display the results as a dictionary where each word is a key and its frequency i
 Write a program that takes a list of integers from the user and returns a new list containing
 the square of each number in the original list.'''
 
-nums=input("Enter a list of numbers separated by space ")
-nums_list=list(map(int,nums.split()))
-ans=[i**2 for i in nums_list]
-print(ans)
+# nums=input("Enter a list of numbers separated by space ")
+# nums_list=list(map(int,nums.split()))
+# ans=[i**2 for i in nums_list]
+# print(ans)
 
 '''12. Remove Duplicates from a List
 Ask the user to enter a list of numbers, some of which may be duplicates. Write a program
 to remove the duplicates and display the list with only unique numbers.'''
+
+nums=input("Enter a list of numbers separated by space ")
+nums_list=list(map(int,nums.split()))
+ans=[]
+for i in nums_list:
+    if i not in ans:
+        ans.append(i)
+print(ans)
+
+
 
 '''13. Merge and Sort Two Lists
 Take two lists of integers from the user. Write a program that merges both lists into a single
