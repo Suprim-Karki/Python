@@ -195,13 +195,25 @@ words in the sentence that have exactly n characters.'''
 Write a program that asks the user for a sentence and splits it into a list of words. Print the
 list of words as the output.'''
 
-sentence=input("Enter a sentence: ")
-word_list=sentence.split(" ")
-print(word_list)
+# sentence=input("Enter a sentence: ")
+# word_list=sentence.split(" ")
+# print(word_list)
 
 '''16. Capitalize Each Word in a Sentence
 Ask the user to enter a sentence and write a program that capitalizes the first letter of each
 word in the sentence. Display the modified sentence.'''
+
+sentence=input("Enter a sentence: ")
+modified_sentence=""
+word_list=sentence.split(" ")
+for i,word in enumerate(word_list):
+    word = word[0].upper()+word[1:]
+    word_list[i]=word
+modified_sentence=" ".join(word_list)
+print(modified_sentence)
+
+# or just use modified=sentence.title()
+
 
 '''17. Find the Second Largest Number
 Ask the user for a list of integers and write a program to find the second largest number in
