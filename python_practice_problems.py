@@ -265,13 +265,17 @@ elements alternately from each list. For example, if the input lists are [1, 2, 
 ’b’, ’c’], the output should be [1, ’a’, 2, ’b’, 3, ’c’].
 '''
 
-nums1 = input("Enter the first list (separated by space): ").strip().split()
-nums2 = input("Enter the second list (separated by space): ").strip().split()
-ans=[]
-if len(nums1)==len(nums2) and len(nums1)>0:
-    for i in range(len(nums1)):
-        ans.append(nums1[i])
-        ans.append(nums2[i])
-    print(ans)
-else:
-    print("Provide 2 list of non empty and equal length")
+# nums1 = input("Enter the first list (separated by space): ").strip().split()
+# nums2 = input("Enter the second list (separated by space): ").strip().split()
+# ans=[]
+# if len(nums1)==len(nums2) and len(nums1)>0:
+#     for i in range(len(nums1)):
+#         ans.append(nums1[i])
+#         ans.append(nums2[i])
+#     print(ans)
+# else:
+#     print("Provide 2 list of non empty and equal length")
+
+
+
+
