@@ -44,37 +44,37 @@ Create a program that lets users manage a to-do list, allowing them to add items
 and display the current list. The program should continue until the user enters "exit".
 '''
 
-print("To-Do List Manager")
-print("Add items to your to-do list. Type 'exit' when finished, 'show' to display current list.")
+# print("To-Do List Manager")
+# print("Add items to your to-do list. Type 'exit' when finished, 'show' to display current list.")
 
-todo_list = []  # empty to-do list
-continue_program = True  # boolean to control program execution
+# todo_list = []  # empty to-do list
+# continue_program = True  # boolean to control program execution
 
-while (continue_program):  # condition to keep program running
-    command = input("Enter the To-Do: ")  # get user input
+# while (continue_program):  # condition to keep program running
+#     command = input("Enter the To-Do: ")  # get user input
     
-    if (command.lower()=="exit"):  # check if user wants to exit
-        continue_program = False  # update control variable to exit
-    elif (command.lower()=="show"):  # check if user wants to see current list
-        print("\nCurrent To-Do List:")
-        if (len(todo_list)==0):  # check if list is empty
-            print("Your to-do list is empty!")
-        else:
-            # use a loop to display each item with its position number
-            for i in range(len(todo_list)):
-                print(f"{i+1}. {todo_list[i]}")
-    else:
-        # add item to list
-        todo_list.append(command)
-        print(f"Added: {command}")
+#     if (command.lower()=="exit"):  # check if user wants to exit
+#         continue_program = False  # update control variable to exit
+#     elif (command.lower()=="show"):  # check if user wants to see current list
+#         print("\nCurrent To-Do List:")
+#         if (len(todo_list)==0):  # check if list is empty
+#             print("Your to-do list is empty!")
+#         else:
+#             # use a loop to display each item with its position number
+#             for i in range(len(todo_list)):
+#                 print(f"{i+1}. {todo_list[i]}")
+#     else:
+#         # add item to list
+#         todo_list.append(command)
+#         print(f"Added: {command}")
 
-# Display final list
-print("\nFinal To-Do List:")
-if (len(todo_list)==0):  # check if list is empty
-    print("Your to-do list is empty!")
-else:
-    for i in range(len(todo_list)):
-        print(f"{i+1}. {todo_list[i]}")
+# # Display final list
+# print("\nFinal To-Do List:")
+# if (len(todo_list)==0):  # check if list is empty
+#     print("Your to-do list is empty!")
+# else:
+#     for i in range(len(todo_list)):
+#         print(f"{i+1}. {todo_list[i]}")
 
 # Total for Task 2 (20 marks)
 
@@ -91,43 +91,43 @@ username: "admin" and password: "password123" OR
 username: "user" and password: "user2024"
 '''
 
-# def validate_credentials(username, password):
-#     # Check if credentials match any of the valid combinations
-#     if ("your code here"):  # check first valid combination
-#         return "your code here"  # return appropriate boolean
-#     elif ("your code here"):  # check second valid combination
-#         return "your code here"  # return appropriate boolean
-#     else:
-#         return "your code here"  # return appropriate boolean for invalid credentials
+def validate_credentials(username, password):
+    # Check if credentials match any of the valid combinations
+    if (username=="admin" and password=="password123"):  # check first valid combination
+        return True  # return appropriate boolean
+    elif (username=="user" and password=="user2024"):  # check second valid combination
+        return True  # return appropriate boolean
+    else:
+        return False  # return appropriate boolean for invalid credentials
 
-# # Main program
-# print("Login System")
+# Main program
+print("Login System")
 
-# max_attempts = 3
-# attempts = 0
-# logged_in = "your code here"  # boolean to track login status
+max_attempts = 3
+attempts = 0
+logged_in = False  # boolean to track login status
 
-# while ("your code here" and "your code here"):  # condition to continue while not logged in and under max attempts
-#     # Get user credentials
-#     username = "your code here"
-#     password = "your code here"
+while (not logged_in and attempts<3):  # condition to continue while not logged in and under max attempts
+    # Get user credentials
+    username = input("Enter your username: ")
+    password = input("Enter the password: ")
     
-#     # Validate credentials using function
-#     if ("your code here"):  # call validation function with appropriate parameters
-#         print("Login successful!")
-#         logged_in = "your code here"  # update login status
-#     else:
-#         attempts = "your code here"  # increment attempt counter
-#         remaining = max_attempts - attempts
-#         print(f"Invalid credentials. {remaining} attempts remaining.")
+    # Validate credentials using function
+    if (validate_credentials(username,password)):  # call validation function with appropriate parameters
+        print("Login successful!")
+        logged_in = True  # update login status
+    else:
+        attempts = attempts+1  # increment attempt counter
+        remaining = max_attempts - attempts
+        print(f"Invalid credentials. {remaining} attempts remaining.")
 
-# # Check final login status
-# if ("your code here"):  # check if user is logged in
-#     print("Welcome to the system!")
-# else:
-#     print("Maximum login attempts exceeded. Account locked.")
+# Check final login status
+if (logged_in):  # check if user is logged in
+    print("Welcome to the system!")
+else:
+    print("Maximum login attempts exceeded. Account locked.")
 
-# # Total for Task 3 (20 marks)
+# Total for Task 3 (20 marks)
 
 
 
