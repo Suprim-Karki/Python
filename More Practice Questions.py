@@ -91,41 +91,41 @@ username: "admin" and password: "password123" OR
 username: "user" and password: "user2024"
 '''
 
-def validate_credentials(username, password):
-    # Check if credentials match any of the valid combinations
-    if (username=="admin" and password=="password123"):  # check first valid combination
-        return True  # return appropriate boolean
-    elif (username=="user" and password=="user2024"):  # check second valid combination
-        return True  # return appropriate boolean
-    else:
-        return False  # return appropriate boolean for invalid credentials
+# def validate_credentials(username, password):
+#     # Check if credentials match any of the valid combinations
+#     if (username=="admin" and password=="password123"):  # check first valid combination
+#         return True  # return appropriate boolean
+#     elif (username=="user" and password=="user2024"):  # check second valid combination
+#         return True  # return appropriate boolean
+#     else:
+#         return False  # return appropriate boolean for invalid credentials
 
-# Main program
-print("Login System")
+# # Main program
+# print("Login System")
 
-max_attempts = 3
-attempts = 0
-logged_in = False  # boolean to track login status
+# max_attempts = 3
+# attempts = 0
+# logged_in = False  # boolean to track login status
 
-while (not logged_in and attempts<3):  # condition to continue while not logged in and under max attempts
-    # Get user credentials
-    username = input("Enter your username: ")
-    password = input("Enter the password: ")
+# while (not logged_in and attempts<3):  # condition to continue while not logged in and under max attempts
+#     # Get user credentials
+#     username = input("Enter your username: ")
+#     password = input("Enter the password: ")
     
-    # Validate credentials using function
-    if (validate_credentials(username,password)):  # call validation function with appropriate parameters
-        print("Login successful!")
-        logged_in = True  # update login status
-    else:
-        attempts = attempts+1  # increment attempt counter
-        remaining = max_attempts - attempts
-        print(f"Invalid credentials. {remaining} attempts remaining.")
+#     # Validate credentials using function
+#     if (validate_credentials(username,password)):  # call validation function with appropriate parameters
+#         print("Login successful!")
+#         logged_in = True  # update login status
+#     else:
+#         attempts = attempts+1  # increment attempt counter
+#         remaining = max_attempts - attempts
+#         print(f"Invalid credentials. {remaining} attempts remaining.")
 
-# Check final login status
-if (logged_in):  # check if user is logged in
-    print("Welcome to the system!")
-else:
-    print("Maximum login attempts exceeded. Account locked.")
+# # Check final login status
+# if (logged_in):  # check if user is logged in
+#     print("Welcome to the system!")
+# else:
+#     print("Maximum login attempts exceeded. Account locked.")
 
 # Total for Task 3 (20 marks)
 
@@ -139,31 +139,31 @@ Create a program that asks users for their age and validates that it is between
 0 and 120. The program should continue asking until valid input is received.
 '''
 
-# print("Age Verification System")
-# print("Please enter your age (0-120)")
+print("Age Verification System")
+print("Please enter your age (0-120)")
 
-# valid_data = "your code here"  # boolean to track if valid data has been entered
-# age = "your code here"  # initialize age variable
+valid_data = False  # boolean to track if valid data has been entered
+age = -1 # initialize age variable
 
-# while ("your code here"):  # loop condition to continue while data is not valid
-#     try:
-#         # Get user input and convert to integer
-#         user_input = "your code here"
-#         age = "your code here"  # convert input to integer
+while (not valid_data):  # loop condition to continue while data is not valid
+    try:
+        # Get user input and convert to integer
+        user_input = input("Enter your age: ")
+        age = int(user_input)  # convert input to integer
         
-#         # Check if age is within valid range
-#         if ("your code here"):  # check if age is valid (between 0 and 120)
-#             print("Valid age entered!")
-#             valid_data = "your code here"  # update flag to exit loop
-#         else:
-#             print("your code here")  # error message for out of range
-#     except "your code here":  # catch non-integer inputs
-#         print("your code here")  # error message for non-integer input
+        # Check if age is within valid range
+        if (age>=0 and age<=120):  # check if age is valid (between 0 and 120)
+            print("Valid age entered!")
+            valid_data = True  # update flag to exit loop
+        else:
+            print("Age out of range")  # error message for out of range
+    except ValueError:  # catch non-integer inputs
+        print("The input is non integer and not valid")  # error message for non-integer input
 
-# # Display final result
-# print(f"Thank you! Your age ({age}) has been recorded.")
+# Display final result
+print(f"Thank you! Your age ({age}) has been recorded.")
 
-# # Total for Task 4 (20 marks)
+# Total for Task 4 (20 marks)
 
 
 
