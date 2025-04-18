@@ -139,29 +139,29 @@ Create a program that asks users for their age and validates that it is between
 0 and 120. The program should continue asking until valid input is received.
 '''
 
-print("Age Verification System")
-print("Please enter your age (0-120)")
+# print("Age Verification System")
+# print("Please enter your age (0-120)")
 
-valid_data = False  # boolean to track if valid data has been entered
-age = -1 # initialize age variable
+# valid_data = False  # boolean to track if valid data has been entered
+# age = -1 # initialize age variable
 
-while (not valid_data):  # loop condition to continue while data is not valid
-    try:
-        # Get user input and convert to integer
-        user_input = input("Enter your age: ")
-        age = int(user_input)  # convert input to integer
+# while (not valid_data):  # loop condition to continue while data is not valid
+#     try:
+#         # Get user input and convert to integer
+#         user_input = input("Enter your age: ")
+#         age = int(user_input)  # convert input to integer
         
-        # Check if age is within valid range
-        if (age>=0 and age<=120):  # check if age is valid (between 0 and 120)
-            print("Valid age entered!")
-            valid_data = True  # update flag to exit loop
-        else:
-            print("Age out of range")  # error message for out of range
-    except ValueError:  # catch non-integer inputs
-        print("The input is non integer and not valid")  # error message for non-integer input
+#         # Check if age is within valid range
+#         if (age>=0 and age<=120):  # check if age is valid (between 0 and 120)
+#             print("Valid age entered!")
+#             valid_data = True  # update flag to exit loop
+#         else:
+#             print("Age out of range")  # error message for out of range
+#     except ValueError:  # catch non-integer inputs
+#         print("The input is non integer and not valid")  # error message for non-integer input
 
-# Display final result
-print(f"Thank you! Your age ({age}) has been recorded.")
+# # Display final result
+# print(f"Thank you! Your age ({age}) has been recorded.")
 
 # Total for Task 4 (20 marks)
 
@@ -169,53 +169,53 @@ print(f"Thank you! Your age ({age}) has been recorded.")
 
 
 
-# '''
-# Task 5 - Authentication System
-# Create a program that authenticates users based on username and password.
-# Valid credentials are:
-# username: "student1" password: "pass123"
-# username: "admin" password: "admin2024"
-# The program should give users 3 attempts before locking them out.
-# '''
+'''
+Task 5 - Authentication System
+Create a program that authenticates users based on username and password.
+Valid credentials are:
+username: "student1" password: "pass123"
+username: "admin" password: "admin2024"
+The program should give users 3 attempts before locking them out.
+'''
 
-# print("Login System")
-# print("You have 3 attempts to log in.")
+print("Login System")
+print("You have 3 attempts to log in.")
 
-# # Valid credentials
-# valid_users = {
-#     "student1": "pass123",
-#     "admin": "admin2024"
-# }
+# Valid credentials
+valid_users = {
+    "student1": "pass123",
+    "admin": "admin2024"
+}
 
-# attempts_remaining = "your code here"  # initialize number of login attempts
-# authenticated = "your code here"  # boolean to track authentication status
+attempts_remaining = 3  # initialize number of login attempts
+authenticated = False  # boolean to track authentication status
 
-# while ("your code here" and "your code here"):  # condition for continuing attempts
-#     # Get user credentials
-#     username = "your code here"  # get username
-#     password = "your code here"  # get password
+while (not authenticated and attempts_remaining>0):  # condition for continuing attempts
+    # Get user credentials
+    username = input("Enter username: ")  # get username
+    password = input("Enter password: ")  # get password
     
-#     # Check if username exists
-#     if ("your code here"):  # check if username is in valid_users dictionary
-#         # Username exists, check password
-#         if ("your code here"):  # check if password matches stored password
-#             print("your code here")  # success message
-#             authenticated = "your code here"  # update authentication status
-#         else:
-#             print("your code here")  # password error message
-#             attempts_remaining = "your code here"  # decrease attempts
-#     else:
-#         print("your code here")  # username error message
-#         attempts_remaining = "your code here"  # decrease attempts
+    # Check if username exists
+    if (username in valid_users):  # check if username is in valid_users dictionary
+        # Username exists, check password
+        if (password==valid_users[username]):  # check if password matches stored password
+            print("Successfully logged in")  # success message
+            authenticated = True  # update authentication status
+        else:
+            print("Invalid password!")  # password error message
+            attempts_remaining = attempts_remaining-1  # decrease attempts
+    else:
+        print("Invalid username!")  # username error message
+        attempts_remaining = attempts_remaining-1  # decrease attempts
     
-#     # Display remaining attempts if not authenticated
-#     if ("your code here" and "your code here"):  # check if not authenticated and attempts remain
-#         print(f"Attempts remaining: {attempts_remaining}")
+    # Display remaining attempts if not authenticated
+    if (not authenticated and attempts_remaining>0):  # check if not authenticated and attempts remain
+        print(f"Attempts remaining: {attempts_remaining}")
 
-# # Final message based on authentication status
-# if ("your code here"):  # check if authenticated
-#     print("Welcome to the system!")
-# else:
-#     print("your code here")  # account locked message
+# Final message based on authentication status
+if (authenticated):  # check if authenticated
+    print("Welcome to the system!")
+else:
+    print("Accouont locked")  # account locked message
 
-# # Total for Task 5 (20 marks)
+# Total for Task 5 (20 marks)
