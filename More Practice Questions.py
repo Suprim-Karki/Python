@@ -4,33 +4,33 @@ Create a function that allows users to add items to a shopping list until they e
 The function should return the complete shopping list when finished.
 '''
 
-def create_shopping_list():
-    shopping_list = []  # empty shopping list to store items
-    adding_items = True   # boolean variable to control the loop
+# def create_shopping_list():
+#     shopping_list = []  # empty shopping list to store items
+#     adding_items = True   # boolean variable to control the loop
     
-    print("Shopping List Creator")
-    print("Enter items for your shopping list. Type 'done' when finished.")
+#     print("Shopping List Creator")
+#     print("Enter items for your shopping list. Type 'done' when finished.")
     
-    while (adding_items):  # condition to continue loop while still adding items
-        item = input("Enter the item: ")  # get user input for next item
+#     while (adding_items):  # condition to continue loop while still adding items
+#         item = input("Enter the item: ")  # get user input for next item
         
-        if (item.lower()=="done"):  # check if user is done adding items
-            adding_items = False  # update control variable to exit loop
-        else:
-            shopping_list.append(item)  # add item to shopping list
+#         if (item.lower()=="done"):  # check if user is done adding items
+#             adding_items = False  # update control variable to exit loop
+#         else:
+#             shopping_list.append(item)  # add item to shopping list
     
-    return shopping_list  # return the complete shopping list
+#     return shopping_list  # return the complete shopping list
 
-# Call function to get shopping list
-my_shopping_list = create_shopping_list()
+# # Call function to get shopping list
+# my_shopping_list = create_shopping_list()
 
-# Display shopping list
-print("\nYour Shopping List:")
-if (len(my_shopping_list)==0):  # check if shopping list is empty
-    print("Your shopping list is empty!")
-else:
-    for item in my_shopping_list:  # loop through items in shopping list
-        print(item)  # display each item
+# # Display shopping list
+# print("\nYour Shopping List:")
+# if (len(my_shopping_list)==0):  # check if shopping list is empty
+#     print("Your shopping list is empty!")
+# else:
+#     for item in my_shopping_list:  # loop through items in shopping list
+#         print(item)  # display each item
 
 # Total for Task 1 (20 marks)
 
@@ -44,37 +44,37 @@ Create a program that lets users manage a to-do list, allowing them to add items
 and display the current list. The program should continue until the user enters "exit".
 '''
 
-# print("To-Do List Manager")
-# print("Add items to your to-do list. Type 'exit' when finished, 'show' to display current list.")
+print("To-Do List Manager")
+print("Add items to your to-do list. Type 'exit' when finished, 'show' to display current list.")
 
-# todo_list = "your code here"  # empty to-do list
-# continue_program = "your code here"  # boolean to control program execution
+todo_list = []  # empty to-do list
+continue_program = True  # boolean to control program execution
 
-# while ("your code here"):  # condition to keep program running
-#     command = "your code here"  # get user input
+while (continue_program):  # condition to keep program running
+    command = input("Enter the To-Do: ")  # get user input
     
-#     if ("your code here"):  # check if user wants to exit
-#         continue_program = "your code here"  # update control variable to exit
-#     elif ("your code here"):  # check if user wants to see current list
-#         print("\nCurrent To-Do List:")
-#         if ("your code here"):  # check if list is empty
-#             print("Your to-do list is empty!")
-#         else:
-#             # use a loop to display each item with its position number
-#             for "your code here" in range("your code here"):
-#                 print(f"{i+1}. {todo_list[i]}")
-#     else:
-#         # add item to list
-#         "your code here"
-#         print(f"Added: {command}")
+    if (command.lower()=="exit"):  # check if user wants to exit
+        continue_program = False  # update control variable to exit
+    elif (command.lower()=="show"):  # check if user wants to see current list
+        print("\nCurrent To-Do List:")
+        if (len(todo_list)==0):  # check if list is empty
+            print("Your to-do list is empty!")
+        else:
+            # use a loop to display each item with its position number
+            for i in range(len(todo_list)):
+                print(f"{i+1}. {todo_list[i]}")
+    else:
+        # add item to list
+        todo_list.append(command)
+        print(f"Added: {command}")
 
-# # Display final list
-# print("\nFinal To-Do List:")
-# if ("your code here"):  # check if list is empty
-#     print("Your to-do list is empty!")
-# else:
-#     for "your code here" in range("your code here"):
-#         print(f"{i+1}. {todo_list[i]}")
+# Display final list
+print("\nFinal To-Do List:")
+if (len(todo_list)==0):  # check if list is empty
+    print("Your to-do list is empty!")
+else:
+    for i in range(len(todo_list)):
+        print(f"{i+1}. {todo_list[i]}")
 
 # Total for Task 2 (20 marks)
 
