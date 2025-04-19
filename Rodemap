@@ -86,3 +86,77 @@ Data pipelines & ETL concepts
 Cloud (AWS/GCP/Azure basics)
 
 Version control with Git
+
+
+
+Here's a **roadmap to becoming a Data Analyst**, step by step, with key skills and tools you'll need to learn:
+
+---
+
+### **1. Foundations (Month 1-2)**
+- **Learn the basics of data & analytics**
+  - What is data analysis?
+  - Types of data (structured, unstructured)
+  - Data lifecycle and roles
+
+- **Excel / Google Sheets**
+  - Formulas, Pivot tables, Charts
+  - Basic data cleaning & formatting
+
+- **Mathematics & Statistics**
+  - Descriptive statistics (mean, median, mode, std dev)
+  - Probability basics
+  - Hypothesis testing
+
+---
+
+### **2. Programming (Month 3-4)**
+- **Learn SQL** (essential for querying databases)
+  - SELECT, WHERE, JOIN, GROUP BY, HAVING
+  - Subqueries, CTEs, Window functions
+
+- **Learn Python or R** (Python is more widely used)
+  - Data manipulation with pandas
+  - Data visualization with matplotlib / seaborn
+  - Basic scripting and automation
+
+---
+
+### **3. Data Visualization (Month 5)**
+- **Tools to Learn**
+  - Tableau or Power BI
+  - Excel dashboards
+  - Python visualizations (seaborn, matplotlib, plotly)
+
+- **Storytelling with Data**
+  - Learn how to interpret and present insights
+  - Practice creating dashboards and reports
+
+---
+
+### **4. Real-World Data Projects (Month 6-7)**
+- **Data Cleaning & EDA (Exploratory Data Analysis)**
+- Use public datasets (Kaggle, Google Dataset Search)
+- Document and present insights
+- Share your projects on GitHub / LinkedIn
+
+---
+
+### **5. Advanced Topics (Optional - Month 8+)**
+- **Basic Machine Learning (if interested)**
+  - Regression, classification
+  - Scikit-learn in Python
+
+- **Big Data Tools**
+  - Basics of Spark, Hadoop (not essential for all roles)
+
+- **Cloud Platforms**
+  - Google BigQuery, AWS, or Azure basics
+
+---
+
+### **6. Get Job-Ready**
+- Build a **portfolio** (3–5 projects)
+- Write a strong **resume**
+- Practice **SQL & case study interviews**
+- Learn how to communicate insights clearly
